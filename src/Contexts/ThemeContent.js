@@ -1,62 +1,56 @@
-import { createContext, useReducer } from "react";
-import themeList from "../data/themeList";
-// import { type } from "@testing-library/user-event/dist/type";
+import { createContext, useReducer } from 'react';
+import themeList from '../data/themeList';
 
-
-const ThemeContent = createContext();
+const ThemeContext = createContext();
 const lightTheme = themeList.light;
 const darkTheme = themeList.dark;
 
-const themeReducer = (state, action) =>{
-    switch(action.type){
-        case 'TOGGLE_THEME':
-            localStorage.setItem(
-                'theme', 
-                state.theme === darkTheme ? lightTheme : darkTheme
-            )
-            
-          return{
-            theme : state.theme === darkTheme ? lightTheme : darkTheme,
-          };
-          default:
-            return state
-    }
-}
+const themeReducer = (state, action) => {
+  switch (action.type) {
+    case 'TOGGLE_THEME':
+      localStorage.setItem(
+        'theme',
+        state.theme === lightTheme ? darkTheme : lightTheme
+      );
+      return {
+        theme: state.theme === darkTheme ? lightTheme : darkTheme,
+      };
+    default:
+      return state;
+  }
+};
 
-const ThemeContentProvider = ({children}) =>{
-const getInitialTheme = () =>{
+const ThemeContextProvider = ({ children }) => {
+  const getInitialTheme = () => {
     const theme = localStorage.getItem('theme');
-    const preferDark = window.matchMedia && window.matchMedia(
-        `(perfers-color-theme: dark )`
-    ).matches;
-
-    if(theme){
-        return theme;
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (theme) {
+      return theme;
     }
-
-    if (preferDark){
-        return darkTheme
+    if (!theme) {
+      if (prefersDark) {
+        return darkTheme;
+      }
+      return lightTheme;
     }
-    return lightTheme;
-}
-    const initialstate = {
-        theme : getInitialTheme(),
-    }
+  };
 
-    const [state, dispatch] = useReducer(themeReducer,initialstate);
+  const initialState = {
+    theme: getInitialTheme(),
+  };
 
-    const value = {
-        theme : state.theme,
-        toggleTheme : () => dispatch({type: 'TOGGLE_THEME'})
-    }
+  const [state, dispatch] = useReducer(themeReducer, initialState);
+  const value = {
+    theme: state.theme,
+    toggleTheme: () => dispatch({ type: 'TOGGLE_THEME' }),
+  };
 
-    return(
-        <ThemeContent.Provider value={value}>
-          {children}
-        </ThemeContent.Provider>
-    )
-}
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
+};
 
-export { ThemeContentProvider};
-
-export default ThemeContent;
+export default ThemeContext;
+export { ThemeContextProvider };

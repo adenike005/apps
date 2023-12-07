@@ -1,5 +1,4 @@
 export default {
-    light: "light",
-    dark : "dark",
-
-};
+    light: 'light',
+    dark: 'dark',
+  };

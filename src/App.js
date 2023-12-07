@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+import GlobalStyles from './Style/GlobalStyled';
+import Landing from './Paging/Landing';
+import { ThemeProvider } from 'styled-components';
+import ThemeContent from './Contexts/ThemeContent';
 
 function App() {
+  const {theme} = useContext(ThemeContent)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ThemeProvider theme={{theme}}>
+    <GlobalStyles/>
+      <Landing/>
+      </ThemeProvider>
+    </>
   );
 }
 

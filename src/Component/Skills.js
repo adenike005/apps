@@ -43,7 +43,7 @@ const HeroSEctionStyles = styled.div`
        
         width: 100%;
         height: 100%;
-        padding: 50px;
+        padding: 40px;
         text-align: center;
         color: ${({ theme: { theme } }) =>
           theme === themeList.light

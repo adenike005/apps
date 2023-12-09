@@ -2,6 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 import themeList from '../data/themeList';
 
 const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@font-face {
+  font-family: 'MonaLisa';
+  src: url("../public/fonts/MonoLisa-Bold.woff2.ttf");
+}
   :root {
     /* colors */
     --darkBlue_1: #3B447A;
@@ -22,8 +27,11 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 10px;
     /* Import and use Poppins font */
-    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Lato:wght@100&family=Montserrat:wght@200&family=Whisper&display=swap');
+    /* @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Lato:wght@100&family=Montserrat:wght@200&family=Whisper&display=swap'); *
+    /
+
     /* font-family: 'EB Garamond', serif; */
+    font-family: 'MonaLisa', sans-serif; 
   }
 
   body {

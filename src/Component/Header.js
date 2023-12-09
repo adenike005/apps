@@ -257,7 +257,8 @@ const HeaderStyles = styled.header`
         /* color: white; */
         color: ${({ theme: { theme } }) =>
         theme === themeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
-         font-family: 'Whisper', cursive;
+         /* font-family: 'Whisper', cursive; */
+         font-family: 'EB Garamond', sans-serif;
          align-items: center;
 
         

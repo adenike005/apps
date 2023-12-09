@@ -17,9 +17,12 @@ const HeroSEctionStyles = styled.div`
       line-height: 8rem;
       color: ${({ theme: { theme } }) =>
         theme === themeList.light ? "var(--black)" : "var(--lightBlue_1)"};
-      font-weight: 200;
+      font-weight: 400;
       font-style: unset;
-      font-family: 'EB Garamond', cursive;
+      /* font-family: 'EB Garamond', sans-serif; */
+      /* font-family: "MonaLisa"; */
+      font-family: 'MonaLisa', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     }
     .hr {
       color: red;
@@ -85,7 +88,7 @@ function HeroSection() {
         <h3 className="hr">&lt; h1 &gt;</h3>
 
         <h1>
-          18y/o Software Engineer creating intuitive and <br /> user-friendly
+        {new Date().getFullYear() - 2005}y/o Software Engineer creating intuitive and <br /> user-friendly
           experiences.
         </h1>
 

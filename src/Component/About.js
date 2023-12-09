@@ -33,6 +33,9 @@ const HeroSEctionStyles = styled.div`
         theme === themeList.light ? "var(--black)" : "var(--lightBlue_1)"};
       margin: 0px 10px;
     }
+    .profess{
+     color: red;
+    }
   }
   .scroll {
     display: flex;
@@ -78,6 +81,11 @@ function HeroSection() {
           <br /> experiences. <br /> I specialise in building fontend web
           applications and mobile applications with a focus <br />
           on usabilty and simplicity.
+          <br /><br />
+
+
+         <span className="profess"> PROFFESIONAL SUMMARY</span> <br />
+I'm a Software Engineer from Nigeria 🇳🇬, I love building scalable solutions and applications that help people live better. I have advanced experience in tools like JavaScript, React ,Java, C#, Git, GitHub, Gitpod, Flutter and React Native. 
         </h5>
 
         <h3 className="hr">&lt; /p &gt;</h3>

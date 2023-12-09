@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import themeList from "../data/themeList";
 import { Link as ScrollLink } from "react-scroll";
+import { TbWorld } from "react-icons/tb";
+import { FaFigma,  FaAndroid   } from "react-icons/fa";
+import { MdOutlineWeb } from "react-icons/md";
+import { AiOutlineApple } from "react-icons/ai";
+
 
 const HeroSEctionStyles = styled.div`
   padding-top: calc(var(--header-height));
@@ -13,8 +18,7 @@ const HeroSEctionStyles = styled.div`
             ? "var(--darkBlue_2)"
             : "var(--lightBlue_1)"};
             font-size: 3rem;
-            /* font-family: 'Whisper', cursive; */
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Whisper', cursive;
             margin-bottom: 2rem;
     }
    .span{
@@ -28,47 +32,37 @@ const HeroSEctionStyles = styled.div`
    }
     .box {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       /* background-color: yellow; */
       font-size: 1.5rem;
-      gap: 10px;
+      gap: 5px;
       margin-top: 3.5rem;
-      
       
       .boxs {
         border-radius: .5rem;
-        /* border-width: .5px solid rgb(13,13,13); */
+        border-width: .5px solid red;
         /* box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.1 ); */
         font-family: 'Whisper', cursive;
-       
+     
+        /* background-color: red; */
        
         width: 100%;
         height: 100%;
-        padding: 30px;
-        text-align: center;
+        padding: 40px;
+        /* text-align: center; */
         color: ${({ theme: { theme } }) =>
           theme === themeList.light
             ? "var(--darkBlue_2)"
             : "var(--lightBlue_1)"};
-             border: 0.5px solid red;
-
-
-             
-
-             
-            }
-            &:hover{
-      .boxs{
-        /* border: 1px solid #0D0D0D; */
-        cursor: pointer;
+             border: 1px solid red;
+        
+      }
+      .aron{
+        width: 20px;
+        height: 20px;
+        margin: 5px;
       }
     }
-
-    }
-
- 
-
-    
   }
   @media only screen and (max-width: 1200px) {
     .container {
@@ -76,7 +70,7 @@ const HeroSEctionStyles = styled.div`
       .box{
         grid-template-columns: repeat(2, 1fr);
        .boxs{
-        padding: 30px;
+        padding: 40px;
        }
       }
     }
@@ -87,7 +81,7 @@ const HeroSEctionStyles = styled.div`
       .box{
         grid-template-columns: repeat(1, 1fr);
        .boxs{
-        padding: 30px;
+        padding: 40px;
        }
       }
     }
@@ -110,25 +104,32 @@ function HeroSection() {
   return (
     <HeroSEctionStyles id="skill">
       <div className="container">
-        <div className="div">Technologies</div>
-        <span className="span">The list of technologies i've learnt and worked with.</span>
+        <div className="div">Skills
+</div>
+      
         <div className="box">
-          <div className="boxs">React-Native</div>
-          <div className="boxs">React</div>
-          <div className="boxs">Html</div>
-          <div className="boxs">Java Script</div>
-          <div className="boxs">Flutter</div>
-          <div className="boxs">css</div>
-          <div className="boxs">normalize.css</div>
-          <div className="boxs">Angular</div>
-          <div className="boxs">Figma</div>
-          <div className="boxs">Java</div>
-          <div className="boxs">Firebase</div>
-          <div className="boxs">Expo</div>
-          <div className="boxs">C#</div>
-          <div className="boxs">C</div>
-          <div className="boxs">python</div>
-          <div className="boxs">Sql</div>
+          <div className="boxs">
+          <TbWorld size={20} className="aron"/>
+          <MdOutlineWeb className="aron" />
+
+          <h4>Web developnment</h4>
+        </div>
+        <div className="boxs">
+          <FaAndroid 
+ size={20} className="aron"/>
+          <AiOutlineApple
+ className="aron" />
+
+          <h4>Mobile developnment</h4>
+        </div>
+        <div className="boxs">
+          <MdOutlineWeb size={20} className="aron"/>
+          <FaFigma className="aron" />
+
+          <h4>UI/UX Design</h4>
+        </div>
+          
+         
         </div>
       </div>
     </HeroSEctionStyles>

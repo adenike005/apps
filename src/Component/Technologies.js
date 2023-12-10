@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import themeList from "../data/themeList";
-import { Link as ScrollLink } from "react-scroll";
 import { TbWorld } from "react-icons/tb";
 import { FaFigma,  FaAndroid   } from "react-icons/fa";
 import { MdOutlineWeb } from "react-icons/md";
@@ -40,7 +39,7 @@ const HeroSEctionStyles = styled.div`
       
       .boxs {
         border-radius: .5rem;
-        border-width: .5px solid red;
+        border-width: .5px solid #FFCCCC;
         /* box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.1 ); */
         font-family: 'Whisper', cursive;
      
@@ -54,7 +53,12 @@ const HeroSEctionStyles = styled.div`
           theme === themeList.light
             ? "var(--darkBlue_2)"
             : "var(--lightBlue_1)"};
-             border: 1px solid red;
+             border: 1px solid #FFCCCC;
+
+             &:hover {
+      border: 1px solid red; // Add red border on hover
+      cursor: pointer;
+    }
         
       }
       .aron{

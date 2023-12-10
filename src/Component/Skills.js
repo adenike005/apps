@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import themeList from "../data/themeList";
-import { Link as ScrollLink } from "react-scroll";
+
 
 const HeroSEctionStyles = styled.div`
   padding-top: calc(var(--header-height));
@@ -50,19 +50,17 @@ const HeroSEctionStyles = styled.div`
           theme === themeList.light
             ? "var(--darkBlue_2)"
             : "var(--lightBlue_1)"};
-             border: 0.5px solid red;
+             border: 0.5px solid #FFCCCC;
 
 
-             
+             &:hover {
+      border: 1px solid red; // Add red border on hover
+      cursor: pointer;
+    }
 
              
             }
-            &:hover{
-      .boxs{
-        /* border: 1px solid #0D0D0D; */
-        cursor: pointer;
-      }
-    }
+     
 
     }
 

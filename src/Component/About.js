@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import themeList from "../data/themeList";
-// import { Link } from "react-scroll";
-import { Link } from "react-router-dom";
+
 import { FaGithub, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
@@ -33,8 +32,8 @@ const HeroSEctionStyles = styled.div`
         theme === themeList.light ? "var(--black)" : "var(--lightBlue_1)"};
       margin: 0px 10px;
     }
-    .profess{
-     color: red;
+    .profess {
+      color: red;
     }
   }
   .scroll {
@@ -81,11 +80,15 @@ function HeroSection() {
           <br /> experiences. <br /> I specialise in building fontend web
           applications and mobile applications with a focus <br />
           on usabilty and simplicity.
-          <br /><br />
-
-
-         <span className="profess"> PROFFESIONAL SUMMARY</span> <br />
-I'm a Software Engineer from Nigeria 🇳🇬, I love building scalable solutions and applications that help people live better. I have advanced experience in tools like JavaScript, React ,Java, C#, Git, GitHub, Gitpod, Flutter and React Native. 
+          <br />
+          <br />
+          <span className="profess"> PROFFESIONAL SUMMARY</span> <br />
+          I'm a Software Engineer from Nigeria 🇳🇬, I love building scalable
+          solutions and applications that help people live better. I have
+          advanced experience in tools like JavaScript, React ,Java, C#, Git,
+          GitHub, Gitpod, Flutter and React Native. My passion lies in creating
+          innovative and user-centric solutions to address complex challenges in
+          the ever-evolving tech landscape.
         </h5>
 
         <h3 className="hr">&lt; /p &gt;</h3>

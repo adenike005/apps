@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import themeList from "../data/themeList";
-
+import { FaGithub, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 
 import { CgMail } from "react-icons/cg";
 
@@ -36,33 +37,40 @@ const HeroSEctionStyles = styled.div`
 
     }
     .Acon {
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
       color: ${({ theme: { theme } }) =>
         theme === themeList.light ? "var(--black)" : "var(--lightBlue_1)"};
-      margin: 0px 10px;
+      /* margin: 0px 10px; */
+      margin-right: 10px;
     }
     a{
-        /* margin: 3rem 9rem; */
+        
         display: flex;
-        /* justify-content: center; */
+
         align-items: center;
         flex-direction: row;
         font-family: 'EB Garamond', sans-serif ;
-        /* border-bottom: 1px solid red; */
-        /* width: 230px; */
+       
     }
 
     span{
-        border-bottom: 1px solid red;
+      border-bottom: 2px solid red;
+       display: inline-block; 
+       padding: 5px;
+       margin-top: 1rem;
+       margin-bottom: 2rem;
     }
     h4{
         color: ${({ theme: { theme } }) =>
         theme === themeList.light ? "var(--black)" : "var(--lightBlue_1)"};  
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
     .hr {
       color: red;
+    }
+    .icon{
+      display: flex;
     }
   }
   .scroll {
@@ -76,6 +84,16 @@ const HeroSEctionStyles = styled.div`
         font-size: 1.5rem;
        
         
+  }
+  .follow{
+     color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? 'var(--gray)' : 'var(--gray)'};
+        font-size: 1.2rem;
+        font-weight: 100;
+        font-family: 'EB Garamond', cursive ;
+        margin-bottom: 2rem;
+
+       
   }
 
  
@@ -123,7 +141,7 @@ function HeroSection() {
   
   return (
     
-    <HeroSEctionStyles id="hero">
+    <HeroSEctionStyles id="contact">
       <div className="container">
  
 
@@ -145,9 +163,42 @@ function HeroSection() {
           </a>
             </span>
 
-          <h6>Follow me</h6>
+          <h6 className="follow">Follow me</h6>
       
-          
+          <div className="icon">
+          <a href="https://github.com/adenike005" target="__blank">
+            <FaGithub size={20} className="Acon" />
+          </a>
+          <a
+            href="https://wa.me/08161215777"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp className="Acon" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/adeyinka-adenike-6875a4257/"
+            target="_blank"
+          >
+            <FaLinkedinIn className="Acon" />
+          </a>
+          <a
+            href="https://www.instagram.com/adeyinka1853"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram className="Acon" />
+          </a>
+
+          <a
+            href="mailto:adeyinkaadenike992@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CgMail className="Acon" />
+          </a>
+        </div>
        
       </div>
 

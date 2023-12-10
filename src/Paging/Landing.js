@@ -5,6 +5,8 @@ import About from '../Component/About'
 import Skills from '../Component/Skills'
 import Technologies from '../Component/Technologies'
 import Footer from "../Component/Footer"
+import Footers from "../Component/Footers"
+import Project from "../Component/Project"
 
 function Landing() {
   return (
@@ -15,7 +17,9 @@ function Landing() {
         <About/>
         <Technologies/>
         <Skills/>
+        <Project/>
         <Footer/>
+        <Footers/>
     </>
   )
 }

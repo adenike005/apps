@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     --lightBlue_2: #ADBDE3;
     --white: #FFFFFF;
     --black: #000000;
+    --gray: #808080;
 
     --header-height: 60px;
   }

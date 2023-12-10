@@ -18,7 +18,7 @@ const ThemeSwitcherStyles = styled.div`
     justify-content: space-between;
     position: relative;
     cursor: pointer;
-    background-color: #cfc8f4;
+    background-color: red;
     border-radius: 50px;
     z-index: 1;
     .icon{
@@ -45,7 +45,7 @@ const ThemeSwitcherStyles = styled.div`
     left: var(--gap);
     height: var(--size);
     width: var(--size);
-    background: red;
+    background: #FFCCCC;
     z-index: -1;
     transition: 0.5s ease left ;
  }

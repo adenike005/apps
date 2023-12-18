@@ -229,6 +229,7 @@ const HeaderStyles = styled.header`
   backdrop-filter: blur(10px);
   font-family: 'Whisper', cursive;
   align-items: center;
+  z-index: 1000;
 
   // ... Other styles
 
@@ -316,7 +317,7 @@ const HeaderStyles = styled.header`
       right: 0;
       background-color: red;
       height: 100vh;
-      z-index: 100;
+      z-index: 1000;
       transform: translateX(100%);
       transition: 0.3s ease transform;
       overflow: hidden;

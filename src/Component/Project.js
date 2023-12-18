@@ -41,7 +41,7 @@ const HeroSEctionStyles = styled.div`
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
+            z-index: 2;
           }
 
           .overlay-text {
@@ -60,6 +60,7 @@ const HeroSEctionStyles = styled.div`
         font-size: 1.5rem;
         z-index: 2;
         font-family: 'EB Garamond', cursive;
+        pointer-events: none;
       }
     }
 

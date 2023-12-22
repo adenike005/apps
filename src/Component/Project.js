@@ -127,7 +127,7 @@ const HeroSEctionStyles = styled.div`
 
 function HeroSection() {
   return (
-    <HeroSEctionStyles>
+    <HeroSEctionStyles id="project">
       <div className="container">
         <h2>Featured Projects</h2>
         <p>

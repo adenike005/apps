@@ -24,7 +24,8 @@ const HeroSEctionStyles = styled.div`
             : "var(--lightBlue_1)"};
           font-size: 1.5rem;
           margin: 10px 0;
-          font-family: 'Whisper', sans-serif;
+          /* font-family: 'Whisper', cursive; */
+          font-family: 'EB Garamond', sans-serif;
    }
     .box {
       display: grid;

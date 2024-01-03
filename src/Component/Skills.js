@@ -83,7 +83,7 @@ const HeroSEctionStyles = styled.div`
     .container {
       padding: 1.5rem 1rem;
       .box{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
        .boxs{
         padding: 30px;
        }

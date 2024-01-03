@@ -20,8 +20,8 @@ const HeroSEctionStyles = styled.div`
         theme === themeList.light ? "var(--black)" : "var(--lightBlue_1)"};
 
       /* font-family: "Whisper", cursive; */
-      /* font-family: 'EB Garamond', cursive; */
-      font-family: 'EB Garamond', sans-serif;
+      font-family: 'EB Garamond', cursive;
+      /* font-family: 'EB Garamond', sans-serif; */
     }
     .hr {
       color: red;

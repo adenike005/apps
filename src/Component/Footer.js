@@ -146,7 +146,7 @@ function HeroSection() {
  
 
         <h1>
-        Interested to work with me?
+        Interested in working with me?
         </h1>
         <h5>I’m currently looking to join a team of creative designers and developers.</h5>
 

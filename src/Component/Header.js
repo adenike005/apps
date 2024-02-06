@@ -174,7 +174,7 @@ function Header() {
               )}
               <ul>
                 <li>
-                  <Link to="hero" smooth activeClass="active" spy>
+                  <Link to="hero" smooth activeClass="active" >
                     Home
                   </Link>
                 </li>

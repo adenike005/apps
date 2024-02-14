@@ -56,7 +56,7 @@ const HeaderStyles = styled.header`
     }
     &:hover{
       a{
-        color: white;
+        color: red;
       }
     }
 
@@ -200,6 +200,7 @@ function Header() {
                 </li>
                 {/* ... Other navigation items ... */}
               </ul>
+              
             </nav>
             <ThemeSwitcher />
             {isMobile && (

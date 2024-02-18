@@ -157,7 +157,7 @@ function Header() {
       <div className="container">
         <div className="navigation">
           <Link to="home" smooth={true} duration={500}>
-            <h1>Adenike</h1>
+            <h1>Adenike</h1> 
           </Link>
           <div className="navMenu">
             <nav className={isMobile && isNavOpen ? 'open' : undefined}>

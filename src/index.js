@@ -3,16 +3,17 @@ import ReactDOM from 'react-dom/client';
 // import './index.css';
 import App from './App';
 import "normalize.css/normalize.css"
-import { ThemeContextProvider } from './Contexts/ThemeContent'
+import { BrowserRouter } from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ThemeContextProvider>
+  <BrowserRouter>
+    
 
     <App /> 
-    </ThemeContextProvider>
-  </React.StrictMode>
+    
+  </BrowserRouter>
 );
 
 

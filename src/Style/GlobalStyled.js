@@ -2,8 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@font-face {
+  font-family: 'MonaLisa';
+  src: url("./Fonts/MonoLisa-Regular.woff2");
+}
 
 
   :root {
@@ -26,12 +30,13 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 10px;
-    font-family: 'MonaLisa', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
+    font-family: "Lato", sans-serif;
   }
 
   body {
     background-color: var(--black);
+    
   }
 
   *,

@@ -1,128 +1,126 @@
-import React, { useState } from 'react'
-import styled from "styled-components";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { List, X} from "@phosphor-icons/react";
-
-
+import { List, X } from '@phosphor-icons/react';
 
 const NavbarSection = styled.div`
-  
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--header-height);
-  border-bottom: .5px solid rgba(255,255,255,0.1);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
   color: white;
   backdrop-filter: blur(10px);
-
   align-items: center;
   z-index: 1000;
+  transition: background-color 0.3s ease; /* Add transition for background-color */
 
-  .navbar{
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
-    /* padding: 1.5rem 3rem; */
+    padding: 1.5rem 0rem;
 
-    .logo a{
+    .logo a {
       color: red;
       font-size: 2rem;
       font-weight: bolder;
     }
-   
-    .menu{
-        display: flex;
 
-        a{
-          color: white;
-          font-size: 1.5rem;
-          
-        }
-        li{
-          margin: 5px;
+    .menu {
+      display: flex;
+
+      a {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 15px; /* Adjust margin */
       }
-        
-       
     }
 
-    .hamburger{
+    .hamburger {
       display: none;
     }
 
-    .icon{
+    .icon {
       margin-right: 15px;
       cursor: pointer;
-      
     }
 
-    
-
-   
-
-    
-
-    
-
     @media only screen and (max-width: 768px) {
-      /* padding: 2rem 1.5rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%; */
-      .menu{
+      .menu {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100vh;
         position: absolute;
-        background-color: rgba(0,0,0,0.6);
-        /* background-color: orange; */
+        background-color: rgba(0, 0, 0, 0.6);
         top: 0;
         left: -100%;
         z-index: -3;
       }
 
-      .menu.active{
+      .menu.active {
         left: 0;
       }
 
-      .hamburger{
+      .hamburger {
         display: block;
       }
     }
   }
+`;
 
-  
-`
 function Navbar() {
+  const [click, setClick] = useState(false);
+  const [navbarBg, setNavbarBg] = useState(false);
 
-  const [click , setClick] = useState(false);
-  const handleClick = () => setClick(!click)
+  useEffect(() => {
+    const changeNavbarBg = () => {
+      if (window.scrollY >= 80) {
+        setNavbarBg(true);
+      } else {
+        setNavbarBg(false);
+      }
+    };
+
+    window.addEventListener('scroll', changeNavbarBg);
+
+    return () => {
+      window.removeEventListener('scroll', changeNavbarBg);
+    };
+  }, []);
+
+  const handleClick = () => setClick(!click);
+
   return (
-      <NavbarSection>
-         <div className="navbar">
-
-         <div className="logo">
-            <span><Link>Adenike</Link></span>
-           </div>
-
-           <ul className={click ? "menu active" : "menu"}>
-            <li><Link>Resume</Link></li>
-            <li><Link>Work</Link></li>
-            <li><Link>Contact</Link></li>
-           </ul>
-           <div className='hamburger' onClick={handleClick}>
-            {click ? (<X size={18} />) :( <List size={18}/>)}
-           </div>
-           
-          
-           
-         </div>
-      </NavbarSection>
-  )
+    <NavbarSection style={{ backgroundColor: navbarBg ? '#000' : 'transparent' }}>
+     <div className="container">
+     <div className="navbar">
+        <div className="logo">
+          <span>
+            <Link to="/">Adenike</Link>
+          </span>
+        </div>
+        <ul className={click ? 'menu active' : 'menu'}>
+          <li>
+            <Link >Resume</Link>
+          </li>
+          <li>
+            <Link>Work</Link>
+          </li>
+          <li>
+            <Link>Contact</Link>
+          </li>
+        </ul>
+        <div className="hamburger" onClick={handleClick}>
+          {click ? <X size={18} /> : <List size={18} />}
+        </div>
+      </div>
+     </div>
+    </NavbarSection>
+  );
 }
 
-export default Navbar
+export default Navbar;

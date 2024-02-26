@@ -64,6 +64,17 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
   }
+
+  .loader {
+  /* Your loader styles */
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loader.hidden {
+  opacity: 0;
+}
+
 `;
 
 export default GlobalStyles;

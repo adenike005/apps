@@ -50,6 +50,7 @@ const NavbarSection = styled.div`
     @media only screen and (max-width: 768px) {
       .menu {
         flex-direction: column;
+        gap: 10px;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -59,6 +60,7 @@ const NavbarSection = styled.div`
         top: 0;
         left: -100%;
         z-index: -3;
+        font-size: 2.5rem;
       }
 
       .menu.active {

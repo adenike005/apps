@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Component/Navbar'
 import Hero from '../Component/Hero'
+import Footer from '../Component/Footer'
 
 
 function Landing() {
@@ -8,6 +9,7 @@ function Landing() {
     <>
     <Navbar/>
     <Hero/>
+    <Footer/>
    
     </>
   )

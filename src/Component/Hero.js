@@ -8,17 +8,20 @@ const HeroSection = styled.div`
   .container {
     .text{
         width: 100%;
+        
 
         h2{
             font-size: 6rem;
             color: #FFFFF7;
             font-weight: 300;
             font-family: "Lato", sans-serif;
+            
         }
     }
   }
 
   @media only screen and (max-width: 768px) {
+    padding-top: calc(var(--header-height) + 50px);
     .container {
     .text{
         width: 100%;
@@ -28,6 +31,7 @@ const HeroSection = styled.div`
             color: #FFFFF7;
             font-weight: 300;
             font-family: "Lato", sans-serif;
+           
         }
     }
   }

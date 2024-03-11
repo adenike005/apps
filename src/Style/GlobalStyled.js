@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 @font-face {
   font-family: 'MonaLisa';
@@ -31,7 +31,8 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 10px;
     
-    font-family: "Lato", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
   }
 
   body {
@@ -47,6 +48,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  
   a {
     text-decoration: none;
     cursor: pointer;
@@ -60,7 +62,7 @@ const GlobalStyles = createGlobalStyle`
 
   .container {
     max-width: 1200px;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
   }
   

@@ -6,12 +6,11 @@ const CursorContainer = styled.div`
   transition: opacity 0.3s;
   pointer-events: none;
   position: fixed;
-  width: 20px;
-  height: 20px;
+  width: 100px;
+  height: 100px;
   opacity: 0;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 
@@ -21,10 +20,14 @@ const CursorContainer = styled.div`
 `;
 
 const Dot = styled.span`
-  width: 4px;
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.5);
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const Cursor = () => {
@@ -58,3 +61,4 @@ const Cursor = () => {
 };
 
 export default Cursor;
+

@@ -102,7 +102,7 @@ function Navbar() {
      <div className="navbar">
         <div className="logo">
           <span>
-            <Link to="/">Adenike</Link>
+            <Link to="/">DevLing</Link>
           </span>
         </div>
         <ul className={click ? 'menu active' : 'menu'}>

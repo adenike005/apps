@@ -30,7 +30,8 @@ const Content = styled.div`
    h5{
     color: white;
     margin-top: -5%;
-    margin-bottom: '2%';
+    margin-bottom: 3%;
+    font-size: 1.2rem;
    }
   h3{
     color: white;
@@ -67,7 +68,9 @@ function Body() {
       <Container>
         <ContentWrapper>
           <Content>
-          <h5>👋🏾 hi There i'm Adenike</h5>
+          <h5>👋🏾 hi There i'm 
+          <span style={{ color: "#4a5568", fontSize: '1.6rem' }}> Adenike</span>
+             </h5>
               <h3>I breathe life into the digital world as a <span style={{color:"#4a5568"}}> frontend developer</span> , fueled by an unbridled passion for creativity and innovation.</h3>
            
           </Content>

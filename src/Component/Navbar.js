@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { List, X } from '@phosphor-icons/react';
@@ -59,7 +59,7 @@ const NavbarSection = styled.div`
         background-color: rgba(0, 0, 0, 0.9);
         top: 0;
         left: -100%;
-        z-index: -3;
+        z-index: 999;
         font-size: 2.5rem;
       }
 
@@ -76,28 +76,10 @@ const NavbarSection = styled.div`
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [navbarBg, setNavbarBg] = useState(false);
-
-  useEffect(() => {
-    const changeNavbarBg = () => {
-      if (window.scrollY >= 80) {
-        setNavbarBg(true);
-      } else {
-        setNavbarBg(false);
-      }
-    };
-
-    window.addEventListener('scroll', changeNavbarBg);
-
-    return () => {
-      window.removeEventListener('scroll', changeNavbarBg);
-    };
-  }, []);
-
   const handleClick = () => setClick(!click);
 
   return (
-    <NavbarSection style={{ backgroundColor: navbarBg ? '#000' : 'transparent' }}>
+    <NavbarSection >
      <div className="container">
      <div className="navbar">
         <div className="logo">
@@ -126,3 +108,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+

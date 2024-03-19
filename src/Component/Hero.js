@@ -18,10 +18,12 @@ const ContentWrapper = styled.div`
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
-  @media (min-width: 768px) {
+  @media (min-width: 780px) {
     flex-direction: row;
     gap: 2rem;
   }
+
+
 `;
 
 const Content = styled.div`
@@ -36,11 +38,36 @@ const Content = styled.div`
   h3{
     color: white;
     
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-family: "Inter", sans-serif;
+    .Button{
+      padding: 1rem;
+      border: 1px solid #4a5568;
+      width: 40%;
+      margin-top: 5%;
+
+  
+    }
+    .Button h4{
+      color: white;
+      font-size: 1.2rem;
+      font-family: "Inter", sans-serif;
+      cursor: pointer;
+      text-align: center;
+    }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     width: 50%;
+
+   
+  }
+
+  @media (max-width: 900px) {
+    
+
+    h3{
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -71,12 +98,15 @@ function Body() {
           <h5>👋🏾 hi There i'm 
           <span style={{ color: "#4a5568", fontSize: '1.6rem' }}> Adenike</span>
              </h5>
-              <h3>I breathe life into the digital world as a <span style={{color:"#4a5568"}}> frontend developer</span> , fueled by an unbridled passion for creativity and innovation.</h3>
-           
+              <h3>I breathe life into the digital world as a <span style={{color:"#4a5568"}}> frontend developer</span> , fueled by an unbridled passion for creativity and innovation.
+              <div className='Button'>
+                <h4>Download Cv</h4>
+              </div>
+              </h3>
           </Content>
 
           <Content>
-            <div ref={container}></div>
+            <div ref={container}></div> 
           </Content>
         </ContentWrapper>
       </Container>

@@ -14,7 +14,7 @@ const NavbarSection = styled.div`
   backdrop-filter: blur(10px);
   align-items: center;
   z-index: 1000;
-  transition: background-color 0.3s ease; /* Add transition for background-color */
+  transition: background-color 0.3s ease; 
 
   .navbar {
     display: flex;
@@ -102,7 +102,7 @@ function Navbar() {
      <div className="navbar">
         <div className="logo">
           <span>
-            <Link to="/">DevLing</Link>
+            <Link to="/">Adenike</Link>
           </span>
         </div>
         <ul className={click ? 'menu active' : 'menu'}>

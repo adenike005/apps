@@ -9,8 +9,8 @@ function Landing() {
     <>
     <Navbar/>
     <Hero/>
-    {/* <Footer/> */}
-   
+    <Footer/>
+   {/*  */}
     </>
   )
 }

@@ -15,6 +15,7 @@ const NavbarSection = styled.div`
   align-items: center;
   z-index: 1000;
   transition: background-color 0.3s ease; 
+  
 
   .navbar {
     display: flex;
@@ -78,8 +79,19 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
+  const [ color , setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 100){
+      setColor(true);
+    }else{
+      setColor(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor)
+
   return (
-    <NavbarSection >
+    <NavbarSection  >
      <div className="container">
      <div className="navbar">
         <div className="logo">

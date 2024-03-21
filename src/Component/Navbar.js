@@ -13,7 +13,7 @@ const NavbarSection = styled.div`
   color: white;
   backdrop-filter: blur(10px);
   align-items: center;
-  z-index: 1000;
+  z-index: -3;
   transition: background-color 0.3s ease; 
   
 
@@ -60,7 +60,7 @@ const NavbarSection = styled.div`
         background-color: rgba(0, 0, 0, 0.9);
         top: 0;
         left: -100%;
-        z-index: 999;
+        z-index: -3;
         font-size: 2.5rem;
       }
 
@@ -79,16 +79,7 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
-  const [ color , setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 100){
-      setColor(true);
-    }else{
-      setColor(false);
-    }
-  };
 
-  window.addEventListener("scroll", changeColor)
 
   return (
     <NavbarSection  >
@@ -118,7 +109,5 @@ function Navbar() {
     </NavbarSection>
   );
 }
-
 export default Navbar;
-
 

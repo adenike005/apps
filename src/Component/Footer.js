@@ -43,6 +43,7 @@ function Footer() {
             <Clock /> 
           </div>
         </div>
+        
       </div>
     </FooterSection>
   );

@@ -4,7 +4,7 @@ import lottie from 'lottie-web';
 
 
 const Section = styled.section`
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
 `;
 
 const Container = styled.div`

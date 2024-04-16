@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Clock from './Clock'; // Import the Clock component
 
 const FooterSection = styled.div`
-  padding-top: calc(var(--header-height) + 50px);
+  padding-top: calc(var(--header-height) + 10px);
   color: #FFFFF7;
   font-weight: 300;
   font-family: "Lato", sans-serif;
@@ -42,6 +42,7 @@ function Footer() {
           <div className="count">
             <Clock /> 
           </div>
+          
         </div>
         
       </div>

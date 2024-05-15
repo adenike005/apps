@@ -80,7 +80,7 @@ const Content = styled.div`
 function Body() {
   const animationData = require("../Images/projects.json");
  
-  const container = useRef(null);
+  const container = useRef(null); 
   useEffect(() => {
     lottie.loadAnimation({
       container: container.current,

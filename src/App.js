@@ -8,7 +8,7 @@ import Cursor from './Component/CursorView';
 
 // Styled component for the Landing component with transition effects
 const StyledLanding = styled.div`
-  transform: translateY(${props => props.show ? '0' : '-100vh'});
+  transform: translateY(${props => props.show ? '0' : '-0vh'});
   /* transition: transform 0.5s ease-in; */
   transition: transform 0.5s ease-in-out;
 `;

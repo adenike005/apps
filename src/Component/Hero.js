@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import lottie from 'lottie-web';
-import { Link } from 'react-router-dom';
+
 
 
 

@@ -94,7 +94,7 @@ const HeroSEctionStyles = styled.div`
 
   @media only screen and (max-width: 1200px) {
     .container {
-      padding: 1.5rem 1rem;
+      padding: 1.5rem 0em;
       h1 {
         font-size: 2.6rem;
         

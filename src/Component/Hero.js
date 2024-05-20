@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import lottie from 'lottie-web';
+import { Link } from 'react-router-dom';
 
-const PNG_FILE_URL = 'http://localhost:3000/file_png.pdf';
 
 
 const Section = styled.section`
@@ -80,16 +80,7 @@ const Content = styled.div`
 
 
 function Body() {
-  const downloadFileAtURL = (url) =>{
-    const fileName = url.split('/').pop();
-    const aTag = document.createElement('a');
-    aTag.href = url;
-    aTag.setAttribute('download', fileName)
-    document.body.appendChild(aTag);
-    aTag.click();
-    aTag.remove();
-
-  }
+  
   const animationData = require("../Images/projects.json");
  
   const container = useRef(null); 
@@ -110,10 +101,12 @@ function Body() {
           <h5>👋🏾 hi There i'm 
           <span style={{ color: "#4a5568", fontSize: '1.6rem' }}> Adenike</span>
              </h5>
-              <h3>I breathe life into the digital world as a <span style={{color:"#4a5568"}}> frontend developer</span> , fueled by an unbridled passion for creativity and innovation.
-              <div className='Button' onClick={() => {downloadFileAtURL(PNG_FILE_URL)}}>
+              <h3>I breathe life into the digital world as a <span style={{color:"#4a5568"}}> Software Engineer</span> , fueled by an unbridled passion for creativity and innovation.
+             <a href='Adenike.pdf' download="Cv.pdf">
+             <div className='Button'>
                 <h4>Download Cv</h4>
               </div>
+             </a>
               </h3>
           </Content>
 
